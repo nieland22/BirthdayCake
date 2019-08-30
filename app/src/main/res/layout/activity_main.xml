@@ -35,9 +35,27 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/Frosting"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:baselineAligned="false"
+            android:text="yay..."
+            android:textAlignment="center" />
+
+        <Switch
+            android:id="@+id/Frosting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            android:text="Frosting" />
 
         <Button
             android:id="@+id/button"
@@ -45,11 +63,8 @@
             android:layout_height="wrap_content"
             android:text="HOORAY!!" />
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="yay..." />
-
     </LinearLayout>
+
+
+
 </LinearLayout>
