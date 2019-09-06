@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="visible">
 
 
     <LinearLayout
@@ -13,58 +15,123 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Happy Birthday!"
+            android:textAlignment="center"
             android:textColor="@color/colorPrimary"
-            android:textSize="60dp" />
+            android:textSize="60dp"
+            android:visibility="visible" />
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:orientation="horizontal"
-        android:layout_weight="1">
+        android:visibility="visible">
 
-        <!--        CakeView is a custom SurfaceView that is defined in the app's source code -->
         <cs301.birthdaycake.CakeView
             android:id="@+id/cakeview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            tools:layout_height="match_parent" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/Frosting"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="right|end"
         android:orientation="horizontal"
-        android:visibility="visible">
+        android:visibility="visible"
+        tools:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/button2"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="visible">
 
-            android:baselineAligned="false"
-            android:text="yay..."
-            android:textAlignment="center" />
+            <TextView
+                android:id="@+id/textViewCandle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5sp"
+                android:layout_marginBottom="5sp"
+                android:text="How Many Candles?"
+                android:visibility="visible" />
 
-        <Switch
-            android:id="@+id/Frosting"
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="5"
+                android:progress="2"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
 
-            android:text="Frosting" />
+            <Switch
+                android:id="@+id/FrostingSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
-        <Button
-            android:id="@+id/button"
+                android:checked="true"
+                android:clickable="false"
+                android:keepScreenOn="false"
+                android:text="Frosting"
+                android:visibility="visible"
+                tools:checked="true" />
+
+            <Switch
+                android:id="@+id/candleSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Candles"
+                android:visibility="visible"
+                tools:checked="true" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="HOORAY!!" />
+            android:gravity="right|end"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3sp"
+                android:onClick="goodbye"
+                android:text="Goodbye"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginRight="3sp"
+                android:baselineAligned="false"
+                android:text="Blow Out"
+                android:textAlignment="center"
+                android:visibility="visible" />
+        </LinearLayout>
 
     </LinearLayout>
-
 
 
 </LinearLayout>
